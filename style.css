@@ -1,0 +1,86 @@
+* {
+    --done: #77dd77;
+    --doing: #FDFD96;
+    --cancelled: #ff6961;
+    --gray1: #f0f0f0;
+    --gray2: #ccc;
+    --gray3: #eee;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--gray1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--gray2);
+    border-radius: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: var(--gray3);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: move;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.toggle {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    margin-right: 10px;
+    cursor: pointer;
+    flex-shrink: 0;
+    border-radius: 2px;
+}
+
+.toggle.done {
+    background-color: var(--done);
+}
+
+.toggle.doing {
+    background-color: var(--doing);
+}
+
+.toggle.cancelled {
+    background-color: var(--cancelled);
+}
+
+.delete {
+    color: red;
+    cursor: pointer;
+    margin-left: 10px;
+    flex-shrink: 0;
+}
+
+.dragging {
+    opacity: 0.5;
+}
